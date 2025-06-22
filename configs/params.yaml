@@ -1,0 +1,25 @@
+
+
+paths:
+  data: /Users/june/Documents/data/tabular_process_param/secom.csv
+  model_save: /Users/june/Documents/results/classification/best_model.pkl
+  result: /Users/june/Documents/results/classification
+
+model: 0 # 0 for logistic regression, 1 for xgboos/
+
+hyperparameters:
+  learning_rate: 0.01
+  epochs: 100
+
+optimization:
+    xgboost:
+       n_estimators: [50, 500]
+       max_depth: [2, 10]
+       learning_rate: [0.01, 0.3]
+       subsample: [0.5, 1.0]
+       colsample_bytree: [0.5, 1.0]
+       scale_pos_weight: [1, 10]
+    logistic_regression:
+       C: [0.01, 10.0]
+
+
