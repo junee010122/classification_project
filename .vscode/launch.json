@@ -28,13 +28,13 @@
             ]
         },
         {
-            "name": "Algorithm testing",
-            "type": "python",
+            "name": "Testing API",
+            "type": "debugpy",
             "request": "launch",
             "module": "pytest",
             "args": [
                 "-v",
-                "${workspaceFolder}/test/test_algorithm.py"
+                "api/test"
             ]
         }
     ]
